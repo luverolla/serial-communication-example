@@ -11,7 +11,7 @@ If you want to replicate the example on different enviroments, change baudrate a
 
 ## Overview
 
-<p style="text-align: center">
+<p align="center">
     <img src="./component.png" height="400" />
 </p>
 
@@ -31,9 +31,9 @@ The ICU waits for the echoed square wave and measures its high period width. Tha
 
 To get the time in seconds, this value must be divided by the ICU timer frequency. We only need the MCU-to-object time, so we divide further by two. Finally, remembering that the speed of sound is (almost) constant, we can get the distance as multiplication of speed and time. The final formula is:
 
-$$
-d = \frac{v_{sound} \cdot t_{ticks}}{2 \cdot f_{timer}}
-$$
+<p align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=d=\frac{v_{sound}\cdot{t_{ticks}}}{2f_{timer}}" height="45" />
+</p>
 
 ## Connections to MCU
 
@@ -43,7 +43,7 @@ The following connections are necessary to the component to work properly:
 * `Trig` connected to a GPIO pin in OUTPUT mode
 * `Echo` connected to a GPIO pin enabled for ICU input
 
-<p style="text-align: center">
+<p align="center">
     <img src="./schematic.png" height="400" />
 </p>
 
